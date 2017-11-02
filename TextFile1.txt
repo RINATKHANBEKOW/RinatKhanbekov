@@ -1,0 +1,64 @@
+// Application1.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+using namespace std;
+
+class livingOrganism
+{
+public:
+	int lifeCycle,
+		age;
+
+};
+
+class animal : public livingOrganism
+{
+public:
+	char internalOrgans,
+		Colour;
+	int numberOfLimbs;
+};
+
+class mammals : public animal
+{
+public:
+	char structureOfBones;
+
+};
+
+class artiodactyls : public mammals
+{
+public:
+	int hoof;
+	char species;
+
+	void message() 
+	{
+		cout << "Tygy Duc!Tygy Duc!";
+	}
+
+};
+
+class horse : public artiodactyls
+{
+public:
+	char name;
+
+};
+
+class Cherry : public horse
+{
+public:
+	
+};
+
+
+
+int main()
+{
+	Cherry MScherry;
+	MScherry.message();
+    return 0;
+}
